@@ -25,3 +25,26 @@
 	cursor: pointer;
 	margin-right: 20px;
 }
+
+.NasaImage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .NasaImage h2 {
+	font-size: 1.5rem;
+	margin: 1rem 0;
+  }
+  
+  .NasaImage img {
+	max-width: 100%;
+	height: auto;
+	margin: 1rem 0;
+  }
+  
+  .NasaImage p {
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 1rem 0;
+  }
