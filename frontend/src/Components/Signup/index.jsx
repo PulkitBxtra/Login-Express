@@ -17,11 +17,19 @@ const Signup = () => {
     setData({ ...data, [input.name]: input.value });
   };
 
+  const googleAuth = () => {
+		window.open(
+			`http://localhost:8000/auth/google/callback`,
+			"_self"
+		);
+	};
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // const url = "http://localhost:8000/api/users";
-      const url = "https://mym-backend.onrender.com/api/users";
+      const url = "http://localhost:8000/api/users";
+      // const url = "https://mym-backend.onrender.com/api/users";
       const { data: res } = await axios.post(url, data);
       navigate("/login");
       console.log(res.message);
@@ -46,6 +54,11 @@ const Signup = () => {
               Sing in
             </button>
           </Link>
+
+          <button className={styles.white_btn_bottom} onClick={googleAuth}>
+						{/* <img src="./images/google.png" alt="google icon" /> */}
+						<span>Sing in with Google</span>
+					</button>
         </div>
         <div className={styles.right}>
           <form className={styles.form_container} onSubmit={handleSubmit}>

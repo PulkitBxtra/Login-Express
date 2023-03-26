@@ -11,11 +11,19 @@ const Login = () => {
 		setData({ ...data, [input.name]: input.value });
 	};
 
+	const googleAuth = () => {
+		window.open(
+			`http://localhost:8000/auth/google/callback`,
+			"_self"
+		);
+	};
+
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			// const url = "http://localhost:8000/api/auth";
-			const url = "https://mym-backend.onrender.com/api/auth";
+			const url = "http://localhost:8000/api/auth";
+			// const url = "https://mym-backend.onrender.com/api/auth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			window.location = "/";
@@ -67,6 +75,11 @@ const Login = () => {
 							Sing Up
 						</button>
 					</Link>
+					<button className={styles.white_btnbottom} onClick={googleAuth}>
+						{/* <img src="./images/google.png" alt="google icon" /> */}
+						<span>Sing in with Google</span>
+					</button>
+					
 				</div>
 			</div>
 		</div>

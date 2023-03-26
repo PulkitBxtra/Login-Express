@@ -2,9 +2,18 @@ import React, { useState, useEffect } from 'react';
 import styles from "./styles.module.css";
 
 const Main = () => {
+	const Logout=()=>{
+		handleLogout();
+		googleLogout();
+	}
+
 	const handleLogout = () => {
 		localStorage.removeItem("token");
 		window.location.reload();
+	};
+
+	const googleLogout = () => {
+		window.open(`${process.env.REACT_APP_API_URL}/auth/logout`, "_self");
 	};
 
 	const [imageData, setImageData] = useState(null);
@@ -26,7 +35,7 @@ const Main = () => {
 		<div className={styles.main_container}>
 			<nav className={styles.navbar}>
 				<h1>fakebook</h1>
-				<button className={styles.white_btn} onClick={handleLogout}>
+				<button className={styles.white_btn} onClick={Logout}>
 					Logout
 				</button>
 			</nav>
