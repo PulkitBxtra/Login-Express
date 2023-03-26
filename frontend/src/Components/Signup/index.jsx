@@ -52,13 +52,13 @@ const Signup = () => {
           <h1>Welcome Back</h1>
           <Link to="/login">
             <button type="button" className={styles.white_btn}>
-              Sing in
+              Sign in
             </button>
           </Link>
 
           <button className={styles.white_btn_bottom} onClick={googleAuth}>
 						{/* <img src="./images/google.png" alt="google icon" /> */}
-						<span>Sing in with Google</span>
+						<span>Sign in with Google</span>
 					</button>
         </div>
         <div className={styles.right}>
@@ -102,7 +102,7 @@ const Signup = () => {
             />
             {error && <div className={styles.error_msg}>{error}</div>}
             <button type="submit" className={styles.green_btn}>
-              Sing Up
+              Sign Up
             </button>
           </form>
         </div>
