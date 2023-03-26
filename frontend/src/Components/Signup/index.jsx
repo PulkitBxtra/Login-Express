@@ -19,7 +19,8 @@ const Signup = () => {
 
   const googleAuth = () => {
 		window.open(
-			`http://localhost:8000/auth/google/callback`,
+			// `http://localhost:8000/auth/google/callback`,
+			`https://mym-backend-google.onrender.com/auth/google/callback`,
 			"_self"
 		);
 	};
@@ -28,8 +29,8 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:8000/api/users";
-      // const url = "https://mym-backend.onrender.com/api/users";
+      // const url = "http://localhost:8000/api/users";
+      const url = "https://mym-backend.onrender.com/api/users";
       const { data: res } = await axios.post(url, data);
       navigate("/login");
       console.log(res.message);

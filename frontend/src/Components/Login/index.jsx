@@ -23,8 +23,8 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:8000/api/auth";
-			// const url = "https://mym-backend.onrender.com/api/auth";
+			// const url = "http://localhost:8000/api/auth";
+			const url = "https://mym-backend.onrender.com/api/auth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			window.location = "/";
