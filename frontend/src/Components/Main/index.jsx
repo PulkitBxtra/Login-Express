@@ -19,8 +19,9 @@ const Main = () => {
 	};
 
 	const googleLogout = () => {
-		// window.open(`${process.env.REACT_APP_API_URL}/auth/logout`, "_self");
-		window.open(`https://mym-backend-google.onrender.com/auth/logout`, "_self");
+		window.open(`http://localhost:8000/auth/logout`, "_self");
+		window.open(`/auth/logout`, "_self");
+		// window.open(`https://mym-backend-google.onrender.com/auth/logout`, "_self");
 	};
 
 	const [imageData, setImageData] = useState(null);
