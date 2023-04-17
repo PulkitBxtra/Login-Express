@@ -1,5 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar/navbar';
+import Middle from './components/MiddleDiv/Middle';
+import Right from './components/RightDiv/Right';
 
 function App() {
   return (
@@ -8,8 +10,12 @@ function App() {
       <div className="col-span-1 bg-[#131313] h-full">
         <Navbar></Navbar>
       </div>
-      <div className="col-span-2 bg-gray-400 h-full">2/6</div>
-      <div className="col-span-3 bg-gray-300 h-full">3/6</div>
+      <div className="col-span-2 bg-[#F8F8F8] h-full">
+        <Middle></Middle>
+      </div>
+      <div className="col-span-3 bg-white h-full">
+        <Right></Right>
+      </div>
     </div>
     </div>
   );
